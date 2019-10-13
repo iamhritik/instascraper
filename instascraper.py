@@ -31,14 +31,12 @@ for username in userlist:
 	    		profiledata.append(sourceprofile)
 	    		csvwriter.writerow(profiledata)
 	    		csvwriter.writerow(newline)
-	    		profiledata=[]
 
 	    	csvwriter.writerow(Title2) 
 	    	for post in posts:
 	    		sourceposts = (post.get_attribute('src'))
 	    		postdata.append(sourceposts)
 	    		csvwriter.writerow(postdata)
-	    		postdata=[]
 
 print("Successfully stored all the data in the csv file format.\nThanks for using it.")
 driver.close()  

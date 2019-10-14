@@ -1,4 +1,4 @@
-# instascrapper
+# instascraper
 Instascraper is a command-line application written in Python that scrapes and stored instagram user's profile and posts source URL in a csv file..
 
 

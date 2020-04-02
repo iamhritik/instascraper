@@ -22,7 +22,7 @@ for username in userlist:
 	newline = ['  ']
 	print("Found data for this user: "+username)
 	filename=username+".csv"
-	with open(filename, 'w')as csvfile: 
+	with open(filename,'w')as csvfile: 
 	    	csvwriter=csv.writer(csvfile,delimiter=',')
 	    	csvwriter.writerow(Title1) 
 	    	for profile in profiles:
@@ -39,8 +39,3 @@ for username in userlist:
 			postdata=[]
 driver.close()  
 print("Successfully stored all the data in the csv file format.\nThanks for using it.")
-#made by hritik. :)
-         
-
-
-

@@ -23,19 +23,19 @@ for username in userlist:
 	print("Found data for this user: "+username)
 	filename=username+".csv"
 	with open(filename,'w')as csvfile: 
-	    	csvwriter=csv.writer(csvfile,delimiter=',')
-	    	csvwriter.writerow(Title1) 
-	    	for profile in profiles:
-	    		sourceprofile = (profile.get_attribute('src'))
-	    		profiledata.append(sourceprofile)
-	    		csvwriter.writerow(profiledata)
-	    		csvwriter.writerow(newline)
+		csvwriter=csv.writer(csvfile,delimiter=',')
+		csvwriter.writerow(Title1) 
+		for profile in profiles:
+			sourceprofile = (profile.get_attribute('src'))
+			profiledata.append(sourceprofile)
+	    	csvwriter.writerow(profiledata)
+	    	csvwriter.writerow(newline)
 			profiledata=[]
-	    	csvwriter.writerow(Title2) 
-	    	for post in posts:
-	    		sourceposts = (post.get_attribute('src'))
-	    		postdata.append(sourceposts)
-	    		csvwriter.writerow(postdata)
-			postdata=[]
+	    csvwriter.writerow(Title2) 
+	    for post in posts:
+			sourceposts = (post.get_attribute('src'))
+	    	postdata.append(sourceposts)
+	    	csvwriter.writerow(postdata)
+		postdata=[]
 driver.close()  
 print("Successfully stored all the data in the csv file format.\nThanks for using it.")

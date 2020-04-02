@@ -21,18 +21,18 @@ for username in userlist:
 	newline = ['  ']
 	print("Found data for this user:"+username)
 	filename=username+".csv"
-	with open(filename, 'w') as csvfile: 
+	with open(filename,'w') as csvfile: 
 		csvwriter=csv.writer(csvfile,delimiter=',')
 		csvwriter.writerow(Title1) 
 		for profile in profiles:
-			sourceprofile = (profile.get_attribute('src'))
+			sourceprofile=(profile.get_attribute('src'))
 			profiledata.append(sourceprofile)
 			csvwriter.writerow(profiledata)
 			csvwriter.writerow(newline)
 
 		csvwriter.writerow(Title2) 
 		for post in posts:
-			sourceposts = (post.get_attribute('src'))
+			sourceposts=(post.get_attribute('src'))
 			postdata.append(sourceposts)
 			csvwriter.writerow(postdata)
 driver.close()

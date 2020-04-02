@@ -3,10 +3,11 @@ Instascraper is a command-line application written in Python that scrapes and st
 
 
 Features:
-Scrape multiple users data. 
-Exports data as CSV file.
+
+Scrape multiple users data and exports data as CSV file.
 
 Requirements:
+
 *[Selenium Webdriver] - To obtain javascript variables with ease!
 *[BeautifulSoup] - awesome html parser!
 *[Requests] - Urllib for humans.

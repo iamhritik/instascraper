@@ -1,6 +1,6 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup as bs
-import csv 
+import csv
 
 userlist=['triangl0321','_iamhritik']#Add all your usernames here to get their data very easily.
 options = webdriver.ChromeOptions()

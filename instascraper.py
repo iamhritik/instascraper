@@ -1,7 +1,6 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup as bs
-import time
-import json, csv
+
 userlist=['triangl0321','_iamhritik']#Add all your usernames here to get their data very easily.
 options = webdriver.ChromeOptions()
 options.add_argument('--ignore-certificate-errors')
@@ -22,26 +21,24 @@ for username in userlist:
 	Title2 = ['POSTS URL']
 	newline = ['  ']
 	print("Found data for this user: "+username)
-	filename = username+".csv"
-	with open(filename, 'w') as csvfile: 
-	    	csvwriter = csv.writer(csvfile, delimiter=',')
+	filename=username+".csv"
+	with open(filename, 'w')as csvfile: 
+	    	csvwriter=csv.writer(csvfile,delimiter=',')
 	    	csvwriter.writerow(Title1) 
 	    	for profile in profiles:
 	    		sourceprofile = (profile.get_attribute('src'))
 	    		profiledata.append(sourceprofile)
 	    		csvwriter.writerow(profiledata)
 	    		csvwriter.writerow(newline)
-			profiledata = []
-
+			profiledata=[]
 	    	csvwriter.writerow(Title2) 
 	    	for post in posts:
 	    		sourceposts = (post.get_attribute('src'))
 	    		postdata.append(sourceposts)
 	    		csvwriter.writerow(postdata)
-			postdata = []
-
-print("Successfully stored all the data in the csv file format.\nThanks for using it.")
+			postdata=[]
 driver.close()  
+print("Successfully stored all the data in the csv file format.\nThanks for using it.")
 #made by hritik. :)
          
 
